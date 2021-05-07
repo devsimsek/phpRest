@@ -16,6 +16,11 @@ isset($routing) or die("Error! You Need To Fill Routing");
 
 $router = new Router();
 foreach ($routing as $route) {
+
+    if (empty($route["method"])) {
+        $route["method"] = "get";
+    }
+
     // Adding Routes To Router Class
     $router->add($route["path"], function () use ($route, $router) {
         if (is_array(LIBRARIES)) {
@@ -39,7 +44,7 @@ foreach ($routing as $route) {
             $router->load->route($route["handler"]);
         }
 
-    });
+    }, $route["method"]);
 }
 // And Away We Go!
 $router->ignite();
