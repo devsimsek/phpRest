@@ -2,8 +2,7 @@
 
 > A new way to create restful apis
 
-[![HitCount](http://hits.dwyl.com/devsimsek/phpRest.svg)](http://hits.dwyl.com/devsimsek/phpRest)
-[![Build Status](https://travis-ci.com/devsimsek/phpRest.png?branch=master)](https://travis-ci.com/devsimsek/phpRest)
+[![hits](https://hits.deltapapa.io/github/devsimsek/phpRest.svg)](https://devsimsek.github.io/phpRest)
 [![Github All Releases](https://img.shields.io/github/downloads/devsimsek/phpRest/total.svg)]()
 [![Inline docs](http://inch-ci.org/github/devsimsek/phpRest.svg?branch=master)](http://inch-ci.org/github/devsimsek/phpRest)
 
