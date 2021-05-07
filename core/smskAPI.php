@@ -14,9 +14,10 @@ load_class("Router", "library");
 // Is routing filled correctly?
 isset($routing) or die("Error! You Need To Fill Routing");
 
-$router = new Router($_SERVER);
+$router = new Router();
 foreach ($routing as $route) {
-    $router->addRoute($route["path"], function () use ($route, $router) {
+    // Adding Routes To Router Class
+    $router->add($route["path"], function () use ($route, $router) {
         if (is_array(LIBRARIES)) {
             foreach (LIBRARIES as $lib) {
                 if (strlen($lib) > 0) {
