@@ -53,21 +53,22 @@ For testing and logging everything (such as errors etc.) please open index.php a
 ## Release History
 
 * v1.0
-  * ADD: Added Repo.
+    * ADD: Added Repo.
 * v1.1
-  * CHANGE: Base Structure
-  * ADD: Mvc Routing System
+    * CHANGE: Base Structure
+    * ADD: Mvc Routing System
 * v1.2
-  * CHANGE: Base Structre
-  * ADD: Github Pages
-  * ADD: Github Release
+    * CHANGE: Base Structre
+    * ADD: Github Pages
+    * ADD: Github Release
 
 * v1.3
-  * FIX: OPTIMIZATION
-  * FIX: Fixed Routing Class
-  * CHANGE: Routing Json Structure
-  * ISSUE: phpRest is now only accepting get request. Will be fixed in new update.
-  * ADD: Built-in Libraries Such As Curl.
+    * FIX: OPTIMIZATION
+    * FIX: Fixed Routing Class
+    * CHANGE: Routing Json Structure
+    * ISSUE: phpRest is now only accepting get request. Will be fixed in new update.
+    * ADD: Built-in Libraries Such As Curl.
+    * UPDATE: Request Method Schema
 
 ## Meta
 
@@ -86,3 +87,5 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
    <<<<<<< Updated upstream
 5. Create a new Pull Request =======
 5. Create a new Pull Request
+
+> > > > > Stash Changes!
