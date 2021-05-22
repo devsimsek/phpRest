@@ -43,7 +43,7 @@ echo json_encode(array("database" => $somearrayfromdatabase), JSON_UNESCAPED_UNI
 
 ```
 
-_For more examples and usage, please refer to the [Wiki](wiki)._
+_For more examples and usage, please refer to the [Wiki](https://github.com/devsimsek/phpRest/wiki)._
 
 ## Development setup
 
