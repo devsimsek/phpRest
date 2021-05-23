@@ -94,7 +94,7 @@ For testing and logging everything (such as errors etc.) please open index.php a
     * ADD: Autoloading Libraries (without args)
     * ADD: tag optimization
     * OPTIMIZATION: General Core Classes
-    * v1.5.1
+      * v1.5.1
         * UPDATE: Readme
 
 ## Meta
