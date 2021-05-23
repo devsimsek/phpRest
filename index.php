@@ -5,14 +5,14 @@
  * Please serve this software with phpRestCLI
  * https://makale.me/phpRest-nedir
  * Copyright smskSoft, mtnsmsk, devsimsek, Metin Şimşek.
- * @package	    phpRest
+ * @package        phpRest
  * @file        index
- * @version     v1.4
- * @author	    devsimsek
- * @copyright	Copyright (c) 2021, smskSoft, mtnsmsk
- * @license	    https://opensource.org/licenses/MIT	MIT License
- * @link	    https://devsimsek.github.io/phpRest
- * @since	    Version 1.0
+ * @version     v1.5
+ * @author        devsimsek
+ * @copyright    Copyright (c) 2021, smskSoft, mtnsmsk
+ * @license        https://opensource.org/licenses/MIT	MIT License
+ * @link        https://devsimsek.github.io/phpRest
+ * @since        Version 1.0
  * @filesource
  */
 // Settings
@@ -77,21 +77,15 @@ $libraries = array();
 //      array(
 //          "path" => "version", // path that url will visit. for index use "".
 //          "handler" => "version", // Handler file in app/handlers directory.
+//          "method" => "post", // Request Will Be Only Accepted With This Field.
 //          "variables" => null // Variables that you can pass to handler file.
 //      )
 //  )
 $routing = array(
     array(
-        "path" => "/", // This means / route.
-        "handler" => "index", // Required! this must be filled
-        "method" => "post",
-        "variables" => null, // Accepts array, object or null
-    ),
-    array(
-        "path" => "/", // This means / route.
-        "handler" => "index", // Required! this must be filled
-        "method" => "get",
-        "variables" => null, // Accepts array, object or null
+        "path" => "/",
+        "handler" => "index",
+        "variables" => null
     ),
     array(
         "path" => "/version",
@@ -106,7 +100,7 @@ $routing = array(
 //                        DO NOT TOUCH BELLOW                        //
 // --------------------------------------------------------------------
 define("BASE_DIR", getcwd()); // Get the base directory.
-define("PR_VER", "v1.4");
+define("PR_VER", "v1.5");
 define("HELPERS", $helpers);
 define("LIBRARIES", $libraries);
 // First things first lets check our environment option then we create

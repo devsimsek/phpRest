@@ -31,15 +31,23 @@ class Loader
         return null;
     }
 
-    public function library(string $file)
+    public function library(string $file, string $dir = null)
     {
 
-        if (include APP_DIR . "library/" . $file . ".php") {
-            return include APP_DIR . "library/" . $file . ".php";
-        } else if (include APP_DIR . "library/" . $file . "_lib.php") {
-            return include APP_DIR . "library/" . $file . "_lib.php";
+        if ($dir == null) {
+            if (include APP_DIR . "library/" . $file . ".php") {
+                return include APP_DIR . "library/" . $file . ".php";
+            } else if (include APP_DIR . "library/" . $file . "_lib.php") {
+                return include APP_DIR . "library/" . $file . "_lib.php";
+            } else {
+                die("Error: The library " . $file . " does not exists in " . APP_DIR . "library/" . " directory.");
+            }
         } else {
-            die("Error: The library " . $file . " does not exists in " . APP_DIR . "library/" . " directory.");
+            if (include APP_DIR . "library/" . $dir . "/" . $file . ".php") {
+                return include APP_DIR . "library/" . $dir . "/" . $file . ".php";
+            } else {
+                die("Error: The library " . $file . " does not exists in " . APP_DIR . "library/" . " directory.");
+            }
         }
         return null;
     }

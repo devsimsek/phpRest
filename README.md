@@ -81,6 +81,16 @@ For testing and logging everything (such as errors etc.) please open index.php a
     * ADD: Built-in server [phpRestCLI](https://github.com/devsimsek/phpRest/wiki/lib_Cli)
     * UPDATE: Request Method Schema
 
+* v1.5
+    * FIX: Optimization For Libraries
+    * FIX: Fixed Loader Class
+    * CHANGE: Library Structure
+    * ADD: Uri Library
+    * ADD: Library Registration System
+    * ADD: Autoloading Libraries (without args)
+    * ADD: tag optimization
+    * OPTIMIZATION: General Core Classes
+
 ## Meta
 
 Metin Şimşek – [@devsimsek](https://smsk.me/) – mtnsmsk@smsk.ga

@@ -1,5 +1,18 @@
 <?php
-
+/**
+ * smskSoft Curl Library
+ * Copyright smskSoft, mtnsmsk, devsimsek, Metin Şimşek.
+ * @package     smskSoft-phpLibs
+ * @subpackage  Curl
+ * @file        Curl.php
+ * @version     v1.0
+ * @author      devsimsek
+ * @copyright   Copyright (c) 2021, smskSoft, mtnsmsk
+ * @license     https://opensource.org/licenses/MIT	MIT License
+ * @link        @no_link_specified
+ * @since       Version 1.0
+ * @filesource
+ */
 if (!class_exists("Curl")) {
     /**
      * Curl Library For phpRest api system.
@@ -7,6 +20,19 @@ if (!class_exists("Curl")) {
      */
     class Curl
     {
+        // Always At The Top
+        public function register(): array
+        {
+            // Library Configuration For phpRest
+            $class_name = "Curl";
+            $require_arguments = true;
+
+            return array(
+                "class_name" => $class_name,
+                "require_arguments" => $require_arguments
+            );
+        }
+
         private $url;
         private $options;
 

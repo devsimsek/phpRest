@@ -23,10 +23,31 @@ foreach ($routing as $route) {
 
     // Adding Routes To Router Class
     $router->add($route["path"], function () use ($route, $router) {
+
+        load_class("Loader", "library");
+
+        // Creating Super Loader
+        $super = new stdClass();
+        $super->super = new stdClass();
+
         if (is_array(LIBRARIES)) {
             foreach (LIBRARIES as $lib) {
-                if (strlen($lib) > 0) {
-                    $router->load->library($lib);
+                if (!is_array($lib)) {
+                    if (strlen($lib) > 0) {
+                        $router->load->library($lib);
+                        $lib_register = new ReflectionClass($lib);
+                        $register = $lib_register->newInstanceWithoutConstructor();
+                        if ($register->register()["require_arguments"]) {
+                            $router->load->library($lib);
+                        } else {
+                            $super->super->$lib = new $lib();
+                        }
+                    }
+                } else {
+                    if (isset($lib["file"]) && isset($lib["dir"])) {
+                        $router->load->library($lib["file"], $lib["dir"]);
+                        $super->super->$lib = new $lib["file"]();
+                    }
                 }
             }
         }
@@ -39,9 +60,12 @@ foreach ($routing as $route) {
         }
 
         if (!empty($route["variables"])) {
-            $router->load->route($route["handler"], $route["variables"]);
+            $router->load->route($route["handler"], array(
+                $super,
+                $route["variables"]
+            ));
         } else {
-            $router->load->route($route["handler"]);
+            $router->load->route($route["handler"], $super);
         }
 
     }, $route["method"]);
