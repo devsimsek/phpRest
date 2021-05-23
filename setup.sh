@@ -3,9 +3,10 @@
 # https://github.com/devsimsek/phpRest
 latest_zipball=https://api.github.com/repos/devsimsek/phpRest/zipball
 installer_log=phpRest_installer.log
-defdir=phpRestv1.2
-version="1.3"
-ghdir=ddevsimsek-phpRest-6bdac0e
+defdir=phpRest
+version="1.4"
+ghdir=devsimsek-phpRest-b3e2d2c
+clear
 spinner() {
   local pid=$!
   local delay=0.75
@@ -25,8 +26,9 @@ echo "   ____ ___  / /_____  _________ ___  _____/ /__"
 echo "  / __ ´__ \/ __/ __ \/ ___/ __ ´__ \/ ___/ //_/"
 echo " / / / / / / /_/ / / (__  ) / / / / (__  ) ,<   "
 echo "/_/ /_/ /_/\__/_/ /_/____/_/ /_/ /_/____/_/|_|  "
-echo "Welcome To the svcs phpRest " version " installer"
-echo "Warning! This installer is not done yet! Please do not use it!"
+echo "Welcome To the svcs phpRest v"$version" installer"
+echo "Warning! Installation Will Be Begin In 5 Seconds"
+sleep 5
 echo $(date +'%m/%d/%Y:%R') ": ---------------Start Installer Log---------------" >>$installer_log
 echo $(date +'%m/%d/%Y:%R') ": Checking" $defdir "Directory" >>$installer_log
 if [ ! -d "$defdir" ]; then
@@ -62,6 +64,7 @@ EOF
   cd ../
   chmod +x $defdir
   echo $(date +'%m/%d/%Y:%R') ": Installation Finished. User Can Start Application With cd $defdir && php -S localhost:6107 in terminal..." >>$installer_log
+  echo "\n"
   echo $(date +'%m/%d/%Y:%R') ": Installation Finished. You Can Start Application With cd $defdir && php -S localhost:6107 in terminal..."
 else
   echo "Files Exists. Killing Connection..."
