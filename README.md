@@ -30,20 +30,24 @@ curl https://github.com/devsimsek/phpRest/setup.sh | bash
 
 ## Usage example
 
-A simple database (mysql) router:
+First you need to configure your application. Please look at
+our [tutorial](https://github.com/devsimsek/phpRest/wiki/Tutorial-%231-Configuration).
+
+Then create a handler file at app/handlers directory.
+
+example handler file:
 
 ```php
-$host = '127.0.0.1';
-$user = 'root';
-$pass = '';
-$name = 'phpRest';
-$db = new Database($host, $name, $user, $pass);
-$somearrayfromdatabase = $db->query('SELECT * FROM `sample`');
-echo json_encode(array("database" => $somearrayfromdatabase), JSON_UNESCAPED_UNICODE);
-
+<?php
+set_header(200);
+echo json_encode(array(
+    "message" => "Hello World!"
+), JSON_UNESCAPED_UNICODE);
 ```
 
-_For more examples and usage, please refer to the [Wiki](https://github.com/devsimsek/phpRest/wiki)._
+save it and run phpRestCLI by ```./bin/phpRest serve -d . -p 8001```
+
+For more examples and usage, please refer to the [Wiki](wiki).
 
 ## Development setup
 
@@ -69,6 +73,14 @@ For testing and logging everything (such as errors etc.) please open index.php a
     * ADD: Built-in Libraries Such As Curl.
     * UPDATE: Request Method Schema
 
+* v1.4
+    * FIX: OPTIMIZATION
+    * FIX: Fixed Routing Class
+    * CHANGE: Routing Json Structure
+    * FIX: phpRest is now accepting every request method.
+    * ADD: Built-in server [phpRestCLI](https://github.com/devsimsek/phpRest/wiki/lib_Cli)
+    * UPDATE: Request Method Schema
+
 ## Meta
 
 Metin Şimşek – [@devsimsek](https://smsk.me/) – mtnsmsk@smsk.ga
@@ -84,7 +96,6 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
    <<<<<<< Updated upstream
-5. Create a new Pull Request =======
 5. Create a new Pull Request
 
-> > > > > Stash Changes!
+> Stash Changes!
