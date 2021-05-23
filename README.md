@@ -25,7 +25,7 @@ git clone https://github.com/devsimsek/phpRest.git
 Curl Installation
 
 ```sh
-curl https://github.com/devsimsek/phpRest/setup.sh | bash
+curl https://raw.githubusercontent.com/devsimsek/phpRest/main/setup.sh | bash
 ```
 
 ## Usage example
