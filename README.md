@@ -5,6 +5,10 @@
 [![hits](https://hits.deltapapa.io/github/devsimsek/phpRest.svg)](https://devsimsek.github.io/phpRest)
 [![Github All Releases](https://img.shields.io/github/downloads/devsimsek/phpRest/total.svg)]()
 [![Inline docs](http://inch-ci.org/github/devsimsek/phpRest.svg?branch=master)](http://inch-ci.org/github/devsimsek/phpRest)
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/devsimsek/phpRest/blob/master/LICENSE)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/devsimsek/phpRest/graphs/commit-activity)
+[![GitHub issues](https://img.shields.io/github/issues/devsimsek/phpRest.svg)](https://GitHub.com/devsimsek/phpRest/issues/)
+[![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/devsimsek/phpRest)
 
 With phpRest everybody can create simple, fast and secured restful apis. Start creating your own now!
 
@@ -90,6 +94,8 @@ For testing and logging everything (such as errors etc.) please open index.php a
     * ADD: Autoloading Libraries (without args)
     * ADD: tag optimization
     * OPTIMIZATION: General Core Classes
+    * v1.5.1
+        * UPDATE: Readme
 
 ## Meta
 
