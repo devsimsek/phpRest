@@ -6,16 +6,16 @@ class Loader
     public function route(string $file, $variables = array())
     {
 
-        if (file_exists(ROUTE_DIR . $file . ".php")) {
+        if (file_exists(HANDLERS_DIR . $file . ".php")) {
             if (!is_array($variables)) {
                 $variables = get_object_vars($variables);
             }
             extract($variables);
-            include ROUTE_DIR . $file . ".php";
-        } else if (file_exists(ROUTE_DIR . $file . "_r.php")) {
-            include ROUTE_DIR . $file . "_r.php";
+            include HANDLERS_DIR . $file . ".php";
+        } else if (file_exists(HANDLERS_DIR . $file . "_r.php")) {
+            include HANDLERS_DIR . $file . "_r.php";
         } else {
-            die("Error: The route " . $file . " does not exists in " . ROUTE_DIR . " directory.");
+            die("Error: The route " . $file . " does not exists in " . HANDLERS_DIR . " directory.");
         }
     }
 
@@ -47,16 +47,16 @@ class Loader
     public function view(string $file, $variables = array())
     {
 
-        if (file_exists(ROUTE_DIR . $file . ".php")) {
+        if (file_exists(HANDLERS_DIR . $file . ".php")) {
             if (!is_array($variables)) {
                 $variables = get_object_vars($variables);
             }
             extract($variables);
-            include ROUTE_DIR . $file . ".php";
-        } else if (file_exists(ROUTE_DIR . $file . "_v.php")) {
-            include ROUTE_DIR . $file . "_v.php";
+            include HANDLERS_DIR . $file . ".php";
+        } else if (file_exists(HANDLERS_DIR . $file . "_v.php")) {
+            include HANDLERS_DIR . $file . "_v.php";
         } else {
-            die("Error: The view " . $file . " does not exists in " . ROUTE_DIR . " directory.");
+            die("Error: The view " . $file . " does not exists in " . HANDLERS_DIR . " directory.");
         }
     }
 

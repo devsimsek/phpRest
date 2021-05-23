@@ -16,8 +16,8 @@ foreach ($_SERVER as $key => $value) {
 }
 
 echo json_encode(array(
-    "message" => "You Successfully Accessed smskAPI " . API_VER . ".",
-    "version" => API_VER,
+    "message" => "You Successfully Accessed smskAPI " . PR_VER . ".",
+    "version" => PR_VER,
     "environment" => ENV,
     "server_information" => $server,
     "client_information" => array(
