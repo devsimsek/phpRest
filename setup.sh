@@ -4,7 +4,7 @@
 latest_zipball=https://api.github.com/repos/devsimsek/phpRest/zipball
 installer_log=phpRest_installer.log
 defdir=phpRest
-version="1.4"
+version="1.5-latest"
 ghdir=devsimsek-phpRest-*
 clear
 spinner() {
