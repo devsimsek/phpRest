@@ -96,6 +96,9 @@ For testing and logging everything (such as errors etc.) please open index.php a
     * OPTIMIZATION: General Core Classes
         * v1.5.1
           * UPDATE: Readme
+        * v1.5.2
+          * UPDATED: Built-in general Helper.
+          * FIX: Some Typos
 
 ## Meta
 

@@ -7,7 +7,7 @@
  * Copyright smskSoft, mtnsmsk, devsimsek, Metin Şimşek.
  * @package        phpRest
  * @file        index
- * @version     v1.5
+ * @version     v1.5.2
  * @author        devsimsek
  * @copyright    Copyright (c) 2021, smskSoft, mtnsmsk
  * @license        https://opensource.org/licenses/MIT	MIT License
@@ -19,7 +19,7 @@
 // --------------------------------------------------------------------
 // Application Environment
 // --------------------------------------------------------------------
-// phpRest supports enviroment types. For now we only accept testing
+// phpRest supports environment types. For now we only accept testing
 // and production.
 // Example: $env = "production";
 $env = "test";
@@ -100,7 +100,7 @@ $routing = array(
 //                        DO NOT TOUCH BELLOW                        //
 // --------------------------------------------------------------------
 define("BASE_DIR", getcwd()); // Get the base directory.
-define("PR_VER", "v1.5");
+define("PR_VER", "v1.5.2");
 define("HELPERS", $helpers);
 define("LIBRARIES", $libraries);
 // First things first lets check our environment option then we create
