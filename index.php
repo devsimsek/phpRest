@@ -58,7 +58,7 @@ $handlers = "handlers";
 // phpRest is supporting helpers.
 // By automatically system searches all helpers in app/helpers directory.
 // Example: $helpers = array("custom");
-$helpers = array();
+$helpers = array("general");
 
 // --------------------------------------------------------------------
 // Custom Libraries
@@ -66,7 +66,7 @@ $helpers = array();
 // phpRest is supporting mvc based libraries.
 // By automatically system searches all libraries in app/library directory.
 // Example: $libraries = array("Custom");
-$libraries = array();
+$libraries = array("UUID");
 
 
 // --------------------------------------------------------------------

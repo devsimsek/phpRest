@@ -16,7 +16,7 @@ foreach ($_SERVER as $key => $value) {
 }
 
 echo json_encode(array(
-    "message" => "You Successfully Accessed smskAPI " . PR_VER . ".",
+    "message" => "You Successfully Accessed phpRest " . PR_VER . ".",
     "version" => PR_VER,
     "environment" => ENV,
     "server_information" => $server,

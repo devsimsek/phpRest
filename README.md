@@ -95,10 +95,15 @@ For testing and logging everything (such as errors etc.) please open index.php a
     * ADD: tag optimization
     * OPTIMIZATION: General Core Classes
         * v1.5.1
-          * UPDATE: Readme
+            * UPDATE: Readme
         * v1.5.2
-          * UPDATED: Built-in general Helper.
-          * FIX: Some Typos
+            * UPDATED: Built-in general Helper
+            * FIX: Some Typos
+        * v1.5.3
+            * ADD: Built-in response library
+            * UPDATE: phpRest super structure
+            * FIX: Some Typos
+            * FIX: Readme.md
 
 ## Meta
 

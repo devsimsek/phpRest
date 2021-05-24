@@ -25,10 +25,12 @@ foreach ($routing as $route) {
     $router->add($route["path"], function () use ($route, $router) {
 
         load_class("Loader", "library");
+        load_class("Response", "library");
 
         // Creating Super Loader
         $super = new stdClass();
         $super->super = new stdClass();
+        $super->super->response = new Response();
 
         if (is_array(LIBRARIES)) {
             foreach (LIBRARIES as $lib) {
