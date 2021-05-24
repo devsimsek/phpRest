@@ -88,7 +88,7 @@ if (!function_exists("getField")) {
      * @param $field
      * @return mixed
      */
-    function getGet($field)
+    function getField($field)
     {
         if (!isset($_GET[$field])) {
             echo "Required Field " . $field . " Not Filled. Killing Connection.";
