@@ -104,6 +104,9 @@ For testing and logging everything (such as errors etc.) please open index.php a
             * UPDATE: phpRest super structure
             * FIX: Some Typos
             * FIX: Readme.md
+        * v1.5.4
+            * ADD: UUID Library
+            * UPDATE: Readme.md
 
 ## Meta
 
