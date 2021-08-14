@@ -33,6 +33,14 @@ class Router
      */
     public static function add($expression, $function, $method = 'get')
     {
+        $patterns = [
+            '{url}' => '([0-9a-zA-Z]+)',
+            '{id}' => '([0-9]+)',
+            '{all}' => '(.*)'
+        ];
+
+        $expression = str_replace(array_keys($patterns), array_values($patterns), $expression);
+
         array_push(self::$routes, array(
             'expression' => $expression,
             'function' => $function,
