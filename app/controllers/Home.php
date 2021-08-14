@@ -20,7 +20,7 @@ class Home extends Controller
         parent::__construct();
     }
 
-    public function home()
+    public function index()
     {
         print_r("Welcome. Please use post request to authenticate user.");
         print_r("Request ID: " . $this->uid->generate());
