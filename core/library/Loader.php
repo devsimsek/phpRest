@@ -41,11 +41,12 @@ class Loader
                 $variables = get_object_vars($variables);
             }
             extract($variables);
-            include MODELS . $file . ".php";
+            require MODELS . $file . ".php";
+            return true;
         } else if (file_exists(MODELS . $file . "_m.php")) {
-            include MODELS . $file . "_m.php";
-        } else {
-            die("Error: The model " . $file . " does not exists in " . MODELS . " directory.");
+            require MODELS . $file . "_m.php";
+            return true;
         }
+        return new $file();
     }
 }
