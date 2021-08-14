@@ -4,7 +4,6 @@
 
 [![hits](https://hits.deltapapa.io/github/devsimsek/phpRest.svg)](https://devsimsek.github.io/phpRest)
 [![Github All Releases](https://img.shields.io/github/downloads/devsimsek/phpRest/total.svg)]()
-[![Inline docs](http://inch-ci.org/github/devsimsek/phpRest.svg?branch=master)](http://inch-ci.org/github/devsimsek/phpRest)
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/devsimsek/phpRest/blob/master/LICENSE)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/devsimsek/phpRest/graphs/commit-activity)
 [![GitHub issues](https://img.shields.io/github/issues/devsimsek/phpRest.svg)](https://GitHub.com/devsimsek/phpRest/issues/)
