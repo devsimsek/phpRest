@@ -16,3 +16,4 @@ $router = new Router();
 //                         |    |> The function that router will call
 //                         |> The request path to awake route
 $router->add("/", "home&index");
+$router->add("/version", "version&index");
