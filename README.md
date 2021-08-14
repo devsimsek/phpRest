@@ -10,7 +10,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/devsimsek/phpRest.svg)](https://GitHub.com/devsimsek/phpRest/issues/)
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/devsimsek/phpRest)
 
-# [There is a new version of phpRest which has MVC structre supported! Go check it now!!!](http://github.com/devsimsek/phpRest/tree/v2)
+# [There is a new version of phpRest which has MVC structure supported! Go check it now!!!](http://github.com/devsimsek/phpRest/tree/v2)
 
 With phpRest everybody can create simple, fast and secured restful apis. Start creating your own now!
 
