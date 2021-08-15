@@ -88,7 +88,7 @@ class Response
      */
     public function set_header(int $code, string $content_type = "application/json", string $charset = "utf-8")
     {
-        header('HTTP/1.1 ' . $code . ' ' . http_status($code));
+        header('HTTP/1.1 ' . $code . ' ' . $this->http_status($code));
         header('Content-Type: ' . $content_type . '; charset=' . $charset);
     }
 }
