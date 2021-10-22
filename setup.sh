@@ -1,10 +1,10 @@
 #!/bin/bash
 # Copyright devsimsek
 # https://github.com/devsimsek/phpRest
-latest_zipball=https://api.github.com/repos/devsimsek/phpRest/zipball
+latest_zipball=https://api.github.com/repos/devsimsek/phpRest/zipball/v2
 installer_log=phpRest_installer.log
 defdir=phpRest
-version="1.4"
+version="1.5"
 ghdir=devsimsek-phpRest-*
 clear
 spinner() {
@@ -46,18 +46,14 @@ if [ ! -d "$defdir" ]; then
   rm -rf $ghdir
   cat >".htaccess" <<-"EOF"
 DirectoryIndex index.php
-
 # enable apache rewrite engine
 RewriteEngine on
-
 # set your rewrite base
 # Edit this in your init method too if you script lives in a subfolder
 RewriteBase /
-
 # Deliver the folder or file directly if it exists on the server
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-
 # Push every request to index.php
 RewriteRule ^(.*)$ index.php [QSA]
 EOF

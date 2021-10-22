@@ -27,24 +27,19 @@ class Router
     private static $methodNotAllowed = null;
 
     /**
-     * Router constructor.
-     *
-     * $this->load is main loader object.
-     */
-    public function __construct()
-    {
-        load_class('Loader', 'library');
-        $this->load = new Loader();
-    }
-
-
-    /**
      * @param $expression
      * @param $function
      * @param string $method
      */
     public static function add($expression, $function, $method = 'get')
     {
+        $patterns = [
+            '{url}' => '([0-9a-zA-Z]+)',
+            '{id}' => '([0-9]+)',
+            '{all}' => '(.*)'
+        ];
+
+        $expression = str_replace(array_keys($patterns), array_values($patterns), $expression);
         array_push(self::$routes, array(
             'expression' => $expression,
             'function' => $function,
@@ -119,8 +114,29 @@ class Router
                     if ($basepath != '' && $basepath != '/') {
                         array_shift($matches);// Remove basepath
                     }
+                    if (is_callable($route['function'])) {
+                        call_user_func_array($route['function'], $matches);
+                    } else {
+                        $controller = explode('&', $route['function']);
+                        $classPath = explode('/', $controller[0]);
+                        $className = end($classPath);
 
-                    call_user_func_array($route['function'], $matches);
+                        $controllerFile = array_pop($classPath);
+                        $controllerPath = implode("", $classPath);
+                        $controllerFile = APP_DIR . 'controllers' . DIRECTORY_SEPARATOR . $controllerPath . DIRECTORY_SEPARATOR . ucfirst($controllerFile);
+
+                        if (file_exists($controllerFile . '.php')) {
+                            $controllerFile = $controllerFile . '.php';
+                        } else {
+                            die("Error, Can't Find $controllerFile Controller");
+                        }
+                        if (file_exists($controllerFile)) {
+                            require $controllerFile;
+                            call_user_func_array([new $className, $controller[1]], $matches);
+                        } else {
+                            die("Error, Can't Find $controllerFile Controller");
+                        }
+                    }
 
                     $route_match_found = true;
 

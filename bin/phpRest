@@ -4,16 +4,16 @@
  * smskSoft Restful Api Development Framework.
  * This software uses a customized part from phpIgniter and Lightr projects.
  * Please serve this software with phpRestCLI
- * https://makale.me/phpRest-nedir
+ * https://makale.ga/phpRest-nedir
  * Copyright smskSoft, mtnsmsk, devsimsek, Metin Şimşek.
- * @package	    phpRestCLI
+ * @package     phpRestCLI
  * @file        phpRest
  * @version     v1.1
- * @author	    devsimsek
- * @copyright	Copyright (c) 2021, smskSoft, mtnsmsk
- * @license	    https://opensource.org/licenses/MIT	MIT License
- * @link	    https://devsimsek.github.io/phpRest
- * @since	    Version 1.0
+ * @author      devsimsek
+ * @copyright   Copyright (c) 2021, smskSoft, mtnsmsk
+ * @license     https://opensource.org/licenses/MIT	MIT License
+ * @link        https://devsimsek.github.io/phpRest
+ * @since       Version 1.0
  * @filesource
  */
 if (ob_get_level()) {
@@ -22,7 +22,8 @@ if (ob_get_level()) {
     echo substr($buf, 0, strpos($buf, file(__FILE__)[0]));
 }
 $phpRestCLI = 1.1;
-require_once "core/library/Cli.php"; // if we dont require our cli library application won't work!
+
+require_once "core/library/Cli.php"; // if we don't require our cli library application won't work!
 
 $cli = new Cli();
 $cli->parse($argv);

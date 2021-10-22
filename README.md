@@ -1,19 +1,90 @@
-# phpRest
+<div id="top"></div>
 
-> A new way to create restful apis
-
+<!-- Shields -->
 [![hits](https://hits.deltapapa.io/github/devsimsek/phpRest.svg)](https://devsimsek.github.io/phpRest)
 [![Github All Releases](https://img.shields.io/github/downloads/devsimsek/phpRest/total.svg)]()
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/devsimsek/phpRest/blob/master/LICENSE)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/devsimsek/phpRest/graphs/commit-activity)
 [![GitHub issues](https://img.shields.io/github/issues/devsimsek/phpRest.svg)](https://GitHub.com/devsimsek/phpRest/issues/)
-[![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/devsimsek/phpRest)
+[![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/devsimsek/phpRest)
 
-> # [There is a new version of phpRest which has MVC structure supported! Go check it now!!!](http://github.com/devsimsek/phpRest/tree/v2)
 
-With phpRest everybody can create simple, fast and secured restful apis. Start creating your own now!
 
-## Installation
+<!-- Logo -->
+<br />
+<div align="center">
+  <a href="https://github.com/devsimsek/phpRest">
+    <i style="font-size: 350%;color: white;-webkit-font-smoothing: antialiased;">php<b style="color: black;text-shadow: #fff 0 0 5px;">Rest</b></i>
+  </a>
+
+<h3 align="center">phpRest</h3>
+
+  <p align="center">
+    Create Restful Api's With The Power Of php And MVC
+    <br />
+    <a href="https://github.com/devsimsek/phpRest"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/devsimsek/phpRest/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/devsimsek/phpRest/issues">Request Feature</a>
+  </p>
+</div>
+
+
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
+
+
+
+<!-- ABOUT THE PROJECT -->
+
+## About The Project
+
+Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor
+for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email`, `email_client`
+, `project_title`, `project_description`
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+### Built With
+
+* [Php](https://php.net/)
+* spf (Closed Source)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- GETTING STARTED -->
+
+## Getting Started
+
+### Installation
+
+You can install phpRest using git, curl or github cli
 
 OS X & Linux & Windows (With Github CLI):
 
@@ -21,7 +92,7 @@ OS X & Linux & Windows (With Github CLI):
 gh repo clone devsimsek/phpRest
 ```
 
-OS X & Linux & Windows
+OS X & Linux & Windows (With Git):
 
 ```sh
 git clone https://github.com/devsimsek/phpRest.git
@@ -30,97 +101,112 @@ git clone https://github.com/devsimsek/phpRest.git
 Curl Installation
 
 ```sh
-curl https://raw.githubusercontent.com/devsimsek/phpRest/main/setup.sh | bash
+curl https://raw.githubusercontent.com/devsimsek/phpRest/setup.sh | bash
 ```
 
-## Usage example
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-First you need to configure your application. Please look at
-our [tutorial](https://github.com/devsimsek/phpRest/wiki/Tutorial-%231-Configuration).
 
-Then create a handler file at app/handlers directory.
 
-example handler file:
+<!-- USAGE EXAMPLES -->
+
+## Usage
+
+Once you've installed phpRest successfully on your workspace please configure your project. You can use
+our [guideline here](https://github.com/devsimsek/phpRest/tree/main/wiki/configuration.md)
+
+Then create a controller file at app/controllers directory.
+
+Example controller file:
 
 ```php
 <?php
-set_header(200);
-echo json_encode(array(
-    "message" => "Hello World!"
-), JSON_UNESCAPED_UNICODE);
+class ExampleFile extends Controller
+{
+    protected $res;
+
+    public function __construct() {
+        $this->load_library("Response");
+        $this->res = new Response();
+    }
+
+    public function ExampleFunction(){
+        $this->res->set_header(200);
+        echo json_encode(array(
+            "message" => "Hello World!"
+        ), JSON_UNESCAPED_UNICODE);
+    }
+}
 ```
 
-save it and run phpRestCLI by ```./bin/phpRest serve -d . -p 8001```
+save it and run phpRest development by ```./bin/phpRest serve -d . -p 8001```
 
-For more examples and usage, please refer to the [Wiki](wiki).
+_For more examples, please refer to the [Documentation](https://example.com)_
 
-## Development setup
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-For testing and logging everything (such as errors etc.) please open index.php and set environment to test.
 
-## Release History
 
-* v1.0
-    * ADD: Added Repo.
-* v1.1
-    * CHANGE: Base Structure
-    * ADD: Mvc Routing System
-* v1.2
-    * CHANGE: Base Structre
-    * ADD: Github Pages
-    * ADD: Github Release
+<!-- ROADMAP -->
 
-* v1.3
-    * FIX: OPTIMIZATION
-    * FIX: Fixed Routing Class
-    * CHANGE: Routing Json Structure
-    * ISSUE: phpRest is now only accepting get request. Will be fixed in new update.
-    * ADD: Built-in Libraries Such As Curl.
-    * UPDATE: Request Method Schema
+## Roadmap
 
-* v1.4
-    * FIX: OPTIMIZATION
-    * FIX: Fixed Routing Class
-    * CHANGE: Routing Json Structure
-    * FIX: phpRest is now accepting every request method.
-    * ADD: Built-in server [phpRestCLI](https://github.com/devsimsek/phpRest/wiki/lib_Cli)
-    * UPDATE: Request Method Schema
+- [x] MVC Structure
+- [x] Built-in Libraries
+- [x] Third Party Library Support
+    - [x] ReSQL (Sqlite)
+    - [x] Database (Mysql)
+    - [x] Curl
+    - [x] Date_time
+    - [x] Response
+    - [x] sScrapy
+    - [x] Uri
+    - [x] Uuid
+    - and more soon...
 
-* v1.5
-    * FIX: Optimization For Libraries
-    * FIX: Fixed Loader Class
-    * CHANGE: Library Structure
-    * ADD: Uri Library
-    * ADD: Library Registration System
-    * ADD: Autoloading Libraries (without args)
-    * ADD: tag optimization
-    * OPTIMIZATION: General Core Classes
-        * v1.5.1
-            * UPDATE: Readme
-        * v1.5.2
-            * UPDATED: Built-in general Helper
-            * FIX: Some Typos
-        * v1.5.3
-            * ADD: Built-in response library
-            * UPDATE: phpRest super structure
-            * FIX: Some Typos
-            * FIX: Readme.md
+See the [open issues](https://github.com/devsimsek/phpRest/issues) for a full list of proposed features (and known
+issues).
 
-## Meta
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-Metin Şimşek – [@devsimsek](https://smsk.me/) – mtnsmsk@smsk.ga
 
-Distributed under the MIT license. See ``LICENSE`` for more information.
 
-[https://github.com/devsimsek/phpRest](https://github.com/devsimsek/)
+<!-- CONTRIBUTING -->
 
 ## Contributing
 
-1. Fork it (<https://github.com/devsimsek/phpRest/fork>)
-2. Create your feature branch (`git checkout -b feature/fooBar`)
-3. Commit your changes (`git commit -am 'Add some fooBar'`)
-4. Push to the branch (`git push origin feature/fooBar`)
-   <<<<<<< Updated upstream
-5. Create a new Pull Request
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any
+contributions you make are **greatly appreciated**.
 
-> Stash Changes!
+If you have a suggestion that would make phpRest better, please fork the repo and create a pull request. You can also
+simply open an issue with the tag "enhancement". Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- LICENSE -->
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- CONTACT -->
+
+## Contact
+
+devsimsek - [@smskSoft](https://smsk.me) - mtnsmsk@smsk.ga
+
+Project Link: [https://github.com/devsimsek/phpRest](https://github.com/devsimsek/phpRest)
+
+<p align="right">(<a href="#top">back to top</a>)</p>

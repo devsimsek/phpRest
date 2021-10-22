@@ -92,7 +92,6 @@ if (isset($phpRestCLI)) {
          * Ignite phpRest Cli Interface
          * @param string $directory
          * @param int $port
-         * TODO:
          * @param bool $save_log
          */
         public function ignite(string $directory = "./", int $port = 8100, bool $save_log = false)
@@ -101,7 +100,7 @@ if (isset($phpRestCLI)) {
             $out = [];
             exec("php -S 127.0.0.1:" . $port . " -t " . $directory, $out);
             for ($i = 0; $i < count($out); $i++) {
-                $this->log($out);
+                $this->log((string)$out);
             }
         }
     }
