@@ -63,9 +63,11 @@
 
 ## About The Project
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor
-for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email`, `email_client`
-, `project_title`, `project_description`
+Ever wanted to create api with simple mvc structure?
+
+With phpRest you can create api's easily by the power of the php and mvc.
+
+So why waiting? Get started now!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
