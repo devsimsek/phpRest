@@ -50,7 +50,7 @@ $app = "";
 // request types such as post, put and delete.
 // You need to set your handlers directory correctly to avoid errors.
 // Note: NO TRAILING SLASH!
-// Example: $controllers = "controlllers";
+// Example: $controllers = "controllers";
 $controllers = "controllers";
 
 // --------------------------------------------------------------------

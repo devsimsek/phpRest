@@ -22,6 +22,7 @@ if (ob_get_level()) {
     echo substr($buf, 0, strpos($buf, file(__FILE__)[0]));
 }
 $phpRestCLI = 1.1;
+
 require_once "core/library/Cli.php"; // if we don't require our cli library application won't work!
 
 $cli = new Cli();

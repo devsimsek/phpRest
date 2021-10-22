@@ -40,7 +40,6 @@ class Router
         ];
 
         $expression = str_replace(array_keys($patterns), array_values($patterns), $expression);
-
         array_push(self::$routes, array(
             'expression' => $expression,
             'function' => $function,
@@ -115,7 +114,6 @@ class Router
                     if ($basepath != '' && $basepath != '/') {
                         array_shift($matches);// Remove basepath
                     }
-
                     if (is_callable($route['function'])) {
                         call_user_func_array($route['function'], $matches);
                     } else {
