@@ -143,7 +143,7 @@ class ExampleFile extends Controller
 
 save it and run phpRest development by ```./bin/phpRest serve -d . -p 8001```
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+_For more examples, please refer to the [Documentation](https://github.com/devsimsek/phpRest/tree/main/wiki)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
