@@ -21,6 +21,7 @@
 
   <p align="center">
     Create Restful Api's With The Power Of php And MVC
+  <h1><a href='https://github.com/devsimsek/phpRest/issues/3'>Project is Discontinued!</a></h1>
     <br />
     <a href="https://github.com/devsimsek/phpRest"><strong>Explore the docs »</strong></a>
     <br />
